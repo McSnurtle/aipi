@@ -1,0 +1,7 @@
+mysql-connector-python~=9.6.0
+fastapi~=0.135.3
+uvicorn
+python-multipart
+pydantic~=2.12.5
+transformers~=5.4.0
+torch~=2.11.0
