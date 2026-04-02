@@ -1,3 +1,5 @@
+FROM python:3.10
+
 # For caching apparently
 COPY requirements.txt .
 
