@@ -6,7 +6,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 # For caching apparently
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt --upgrade --verbose
+RUN pip install -r requirements.txt --upgrade --verbose
 
 COPY src ./src
 
