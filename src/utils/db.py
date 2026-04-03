@@ -92,15 +92,6 @@ def init_tables() -> None:
 
 # ===== CONTEXTS FUNCTIONS =====
 def get_context(cid: int) -> dict:
-    # with db_cursor() as cursor:
-    #     cursor.execute("SELECT context FROM contexts WHERE id = %s;", (cid,))
-    #     row: Union[None, tuple[Union[str, bytes]]] = cursor.fetchone()
-    #     if not row:
-    #         raise KeyError(f"No context could be found under cid {cid}")
-    #     context_bytes: Union[str, bytes] = row[0]
-    #     if not context_bytes:
-    #         raise KeyError(f"No context could be found under cid {cid}")
-    #     return json.loads(context_bytes)
     with db_cursor() as cursor:
         # Use dictionary cursor so results are returned as a dict
         cursor.execute("SELECT * FROM contexts WHERE id = %s;", (cid,))
