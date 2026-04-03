@@ -12,4 +12,4 @@ COPY src ./src
 
 EXPOSE 8000
 
-CMD sh -c ': "${DB_ADDR:?DB_ADDR is required}" && : "${DB_PASS:?DB_ROOT_PASS is required}" && exec uvicorn src.main:app --host 0.0.0.0 --port 8000'
+CMD sh -c ': "${DB_ROOT_PASS:?DB_ROOT_PASS is required}" && exec uvicorn src.main:app --host 0.0.0.0 --port 8000'
