@@ -30,6 +30,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/aipi:${{ github.ref_name }}
-          docker build -f Dockerfile -t $IMAGE_NAME .
-          docker push $IMAGE_NAME
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          IMAGE=ghcr.io/$OWNER/aipi:${{ github.ref_name }}
+          docker build . --file Dockerfile --tag $IMAGE
+          docker push $IMAGE
