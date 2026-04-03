@@ -11,7 +11,6 @@ import mysql.connector
 addr: str = os.getenv("DB_ADDR", "127.0.0.1")
 port: int = int(os.getenv("DB_PORT", "3306"))
 root_pass: str = os.getenv("DB_ROOT_PASS")
-# root_pass: str = "toiletbar"
 
 
 # functions
