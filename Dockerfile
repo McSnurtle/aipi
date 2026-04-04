@@ -14,4 +14,4 @@ EXPOSE 8000
 
 WORKDIR ./src/
 
-CMD sh -c ': "${DB_ROOT_PASS:?DB_ROOT_PASS is required}" && exec uvicorn src.main:app --host 0.0.0.0 --port 8000'
+CMD sh -c ': "${DB_ROOT_PASS:?DB_ROOT_PASS is required}" && exec uvicorn main:app --host 0.0.0.0 --port 8000'
